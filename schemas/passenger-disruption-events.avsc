@@ -1,0 +1,14 @@
+{
+  "type": "record",
+  "name": "PassengerDisruptionEvent",
+  "fields": [
+    {"name": "event_id", "type": "string"},
+    {"name": "pnr_code", "type": "string"},
+    {"name": "passenger_id", "type": "string"},
+    {"name": "affected_flight_id", "type": "string"},
+    {"name": "buffer_time_remaining_minutes", "type": "int"},
+    {"name": "disruption_type", "type": {"type": "enum", "name": "DisruptionType", "symbols": ["MISSED_CONNECTION_RISK", "FLIGHT_DELAY", "GATE_CHANGE"]}},
+    {"name": "recommended_action", "type": "string"},
+    {"name": "timestamp", "type": "long"}
+  ]
+}

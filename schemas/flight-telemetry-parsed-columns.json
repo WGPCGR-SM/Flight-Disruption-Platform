@@ -1,0 +1,13 @@
+{
+  "note": "This table is created and populated by a Flink SQL job (see flink/01_parse_flight_telemetry.sql), not by a connector. The MQTT Source Connector has no Schema Registry support and writes raw bytes, so this typed table is derived from parsing that raw JSON inside Flink using JSON_VALUE. Registered in Schema Registry as JSON Schema (json-registry) once created.",
+  "table_name": "flight_telemetry_parsed",
+  "columns": {
+    "flight_id": "STRING",
+    "aircraft_registration": "STRING",
+    "current_latitude": "DOUBLE",
+    "current_longitude": "DOUBLE",
+    "estimated_arrival_time": "BIGINT",
+    "delay_minutes": "INT",
+    "flight_status": "STRING"
+  }
+}
